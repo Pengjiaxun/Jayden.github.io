@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[超简单的Java发送邮件教程]]></title>
+      <url>%2F2016%2F11%2F21%2F%E8%B6%85%E7%AE%80%E5%8D%95%E7%9A%84Java%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E6%95%99%E7%A8%8B%2F</url>
+      <content type="text"><![CDATA[Java代码实现网易邮箱发送邮件教程 一. 下载并添加mail.jar包到项目中这里不附送下载链接，百度一下，你就知道。 二. 设置邮箱这里以网易邮箱为例 1.进入“设置”菜单，选择“POP3/SMTP/IMAP” 2.勾选下列选项，按照提示设置授权码。（记住授权码，后面代码要用到） 三. 代码示例import java.util.Properties; import javax.mail.Authenticator; import javax.mail.Message.RecipientType; import javax.mail.MessagingException; import javax.mail.PasswordAuthentication; import javax.mail.Session; import javax.mail.Transport; import javax.mail.internet.InternetAddress; import javax.mail.internet.MimeMessage; public class mail163 { public void main(String msg){ // 创建Properties 类用于记录邮箱的一些属性 Properties props = new Properties(); // 表示SMTP发送邮件，必须进行身份验证 props.put(&quot;mail.smtp.auth&quot;,&quot;true&quot;); //此处填写SMTP服务器 props.put(&quot;mail.smtp.host&quot;, &quot;smtp.163.com&quot;); //端口号，网易邮箱端口号为25 props.put(&quot;mail.smtp.port&quot;, &quot;25&quot;); // 此处填写你的账号 props.put(&quot;mail.user&quot;, &quot;xxx@163.com&quot;); // 此处的密码就是前面说的授权码 props.put(&quot;mail.password&quot;, &quot;xxx&quot;); // 构建授权信息，用于进行SMTP进行身份验证 Authenticator authenticator = new Authenticator() { protected PasswordAuthentication getPasswordAuthentication() { // 用户名、密码 String userName = props.getProperty(&quot;mail.user&quot;); String password = props.getProperty(&quot;mail.password&quot;); return new PasswordAuthentication(userName, password); } }; // 使用环境属性和授权信息，创建邮件会话 Session mailSession = Session.getInstance(props, authenticator); // 创建邮件消息 MimeMessage message = new MimeMessage(mailSession); // 设置发件人 InternetAddress form = null; try { form = new InternetAddress(props.getProperty(&quot;mail.user&quot;)); message.setFrom(form); // 设置收件人的邮箱 InternetAddress to = null; to = new InternetAddress(&quot;xxx@163.com&quot;); message.setRecipient(RecipientType.TO, to); // 设置邮件标题 message.setSubject(&quot;测试邮件&quot;); // 设置邮件的内容体 message.setContent(msg, &quot;text/html;charset=UTF-8&quot;); // 最后，发送邮件 Transport.send(message); System.out.println(&quot;邮件已发送,请查收！&quot;); } catch (MessagingException e) { e.printStackTrace(); } } }]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[mac远程桌面连接window证书或相关链接无效]]></title>
       <url>%2F2016%2F11%2F21%2Fmac%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E8%BF%9E%E6%8E%A5window%E8%AF%81%E4%B9%A6%E6%88%96%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5%E6%97%A0%E6%95%88%2F</url>
-      <content type="text"><![CDATA[要想通过mac远程连接到window，首先要安装mac的远程桌面连接软件，安装教程传送门：点我 安装好后，远程连接却报错，错误信息是“证书或相关链接无效”。 解决方法： 在远程连接的window系统里，命令行输入gpedit.msc回车，进入“本地组策略编辑器”； 依次找到 计算机配置 - 管理模板 - Windows 组件 - 远程桌面服务 - 远程桌面会话主机 - 安全 - 远程（RDP）连接要求使用指定的安全层，如下图： 打开 远程（RDP）连接要求使用指定的安全层，如下图进行设置即可：]]></content>
+      <content type="text"><![CDATA[要想通过mac远程连接到window，首先要安装mac的远程桌面连接软件，安装教程传送门：点我 安装好后，远程连接却报错，错误信息是“证书或相关链接无效”。 解决方法 在远程连接的window系统里，命令行输入gpedit.msc回车，进入“本地组策略编辑器”； 依次找到 计算机配置 - 管理模板 - Windows 组件 - 远程桌面服务 - 远程桌面会话主机 - 安全 - 远程（RDP）连接要求使用指定的安全层，如下图： 打开 远程（RDP）连接要求使用指定的安全层，如下图进行设置即可：]]></content>
     </entry>
 
     
