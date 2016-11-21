@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[解决表单提交时中文unable to decode value]]></title>
+      <url>%2F2016%2F11%2F21%2F%E8%A7%A3%E5%86%B3%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4unable%2F</url>
+      <content type="text"><![CDATA[如果网页的页面编码是gb2312，而后端接收的编码是utf-8，提交含有中文值的表单时，就会报unable to decode value的错误，如下图：原本想通过js对提交的值进行编码转换操作，网上查了一下，原来form表单自带有一个“accept-charset”属性，通过它可以设置服务器处理表单的字符格式。所以只需要在要提交的表单加上accept-charset=”utf-8”即可解决]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>%2F2016%2F11%2F19%2Fhello-world%2F</url>
       <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
