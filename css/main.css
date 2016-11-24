@@ -1682,7 +1682,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2b42;
+  background: #399409;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2241,6 +2241,7 @@ a.search-result {
 }
 .category-all-page .category-all-title {
   text-align: center;
+  font-size: 18px;
 }
 .category-all-page .category-all {
   margin-top: 20px;
@@ -2249,6 +2250,7 @@ a.search-result {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
 }
 .category-all-page .category-list-item {
   margin: 5px 10px;
