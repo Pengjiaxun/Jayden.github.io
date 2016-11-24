@@ -100,7 +100,7 @@ Eclipse">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-dfab0ff1674e3ba3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-4e98af5d849c610d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-11-24T07:09:49.000Z">
+<meta property="og:updated_time" content="2016-11-24T09:57:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Selenium+Java前端自动化测试教程">
 <meta name="twitter:description" content="一、工具准备
@@ -410,13 +410,13 @@ Eclipse">
 <li>Eclipse<a id="more"></a> 
 </li>
 </ol>
-<h1 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h1><h4 id="·配置Selenium-RC"><a href="#·配置Selenium-RC" class="headerlink" title="·配置Selenium RC"></a>·配置Selenium RC</h4><ol>
+<h1 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h1><h2 id="·配置Selenium-RC"><a href="#·配置Selenium-RC" class="headerlink" title="·配置Selenium RC"></a>·配置Selenium RC</h2><ol>
 <li><p>下载 selenium-server-standalone-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-022b5f8db9a36c28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-server-standalone-3.0.1"></p>
 </li>
 <li><p>启动selenium服务：<br>将下载的zip包解压，然后在命令行进入解压文件的目录，输入<br>java -jar seleniun-server-standalone-3.0.1.jar<br>如图所示表示启动服务成功：<br><img src="http://upload-images.jianshu.io/upload_images/2529410-0b98249199570819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动selenium服务"></p>
 </li>
 </ol>
-<h4 id="·配置Selenium-Webdriver"><a href="#·配置Selenium-Webdriver" class="headerlink" title="·配置Selenium Webdriver"></a>·配置Selenium Webdriver</h4><ol>
+<h2 id="·配置Selenium-Webdriver"><a href="#·配置Selenium-Webdriver" class="headerlink" title="·配置Selenium Webdriver"></a>·配置Selenium Webdriver</h2><ol>
 <li><p>下载 selenium-java-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-c1388f3be2a10c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-java-3.0.1">  </p>
 </li>
 <li><p>在Eclipse中新建Java Project   </p>
@@ -424,13 +424,13 @@ Eclipse">
 <li>如图操作，导入所需jar包  </li>
 </ol>
 <p><img src="http://upload-images.jianshu.io/upload_images/2529410-dfab0ff1674e3ba3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"><br><img src="http://upload-images.jianshu.io/upload_images/2529410-4e98af5d849c610d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"></p>
-<h4 id="·下载selenium3使用firefox时所需的驱动"><a href="#·下载selenium3使用firefox时所需的驱动" class="headerlink" title="·下载selenium3使用firefox时所需的驱动"></a>·下载selenium3使用firefox时所需的驱动</h4><p>下载地址 <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.9.0" target="_blank" rel="external">https://github.com/mozilla/geckodriver/releases/tag/v0.9.0</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载geckodriver驱动"><br>至此，项目环境搭建完成。  </p>
+<h2 id="·下载selenium3使用firefox时所需的驱动"><a href="#·下载selenium3使用firefox时所需的驱动" class="headerlink" title="·下载selenium3使用firefox时所需的驱动"></a>·下载selenium3使用firefox时所需的驱动</h2><p>下载地址 <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.9.0" target="_blank" rel="external">https://github.com/mozilla/geckodriver/releases/tag/v0.9.0</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载geckodriver驱动"><br>至此，项目环境搭建完成。  </p>
 <h1 id="三、测试示例"><a href="#三、测试示例" class="headerlink" title="三、测试示例"></a>三、测试示例</h1><p>新建一个名为test.java 的文件。<br>实现效果：打开百度首页，输入“Selenium”，点击搜索。   </p>
 <pre><code>package test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;  
+import org.openqa.selenium.firefox.FirefoxDriver;   
 
 public class baidu {
     public static void main(String[] args){
@@ -628,7 +628,7 @@ public class baidu {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、工具准备"><span class="nav-text">一、工具准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、环境搭建"><span class="nav-text">二、环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#·配置Selenium-RC"><span class="nav-text">·配置Selenium RC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#·配置Selenium-Webdriver"><span class="nav-text">·配置Selenium Webdriver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#·下载selenium3使用firefox时所需的驱动"><span class="nav-text">·下载selenium3使用firefox时所需的驱动</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、测试示例"><span class="nav-text">三、测试示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、工具准备"><span class="nav-text">一、工具准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、环境搭建"><span class="nav-text">二、环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#·配置Selenium-RC"><span class="nav-text">·配置Selenium RC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#·配置Selenium-Webdriver"><span class="nav-text">·配置Selenium Webdriver</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#·下载selenium3使用firefox时所需的驱动"><span class="nav-text">·下载selenium3使用firefox时所需的驱动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、测试示例"><span class="nav-text">三、测试示例</span></a></li></ol></div>
             
 
           </div>
