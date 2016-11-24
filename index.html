@@ -390,58 +390,17 @@
 
       
         
-          
-            <p>#一、工具准备</p>
-<ol>
+          <h1 id="一、工具准备"><a href="#一、工具准备" class="headerlink" title="一、工具准备"></a>一、工具准备</h1><ol>
 <li>Firefox浏览器（版本要求47以下，本教程版本为45.5，记得关掉它的自动更新。）</li>
 <li>JDK-1.8</li>
-<li>Eclipse</li>
-</ol>
-<p>#二、环境搭建</p>
-<p>####·配置Selenium RC</p>
-<ol>
-<li><p>下载 selenium-server-standalone-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-022b5f8db9a36c28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-server-standalone-3.0.1"></p>
-</li>
-<li><p>启动selenium服务：<br>将下载的zip包解压，然后在命令行进入解压文件的目录，输入<br>java -jar seleniun-server-standalone-3.0.1.jar<br>如图所示表示启动服务成功：<br><img src="http://upload-images.jianshu.io/upload_images/2529410-0b98249199570819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动selenium服务"></p>
-</li>
-</ol>
-<p>####·配置Selenium Webdriver </p>
-<ol>
-<li><p>下载 selenium-java-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-c1388f3be2a10c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-java-3.0.1">  </p>
-</li>
-<li><p>在Eclipse中新建Java Project   </p>
-</li>
-<li>如图操作，导入所需jar包  </li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2529410-dfab0ff1674e3ba3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"><br><img src="http://upload-images.jianshu.io/upload_images/2529410-4e98af5d849c610d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"></p>
-<p>###·下载selenium3使用firefox时所需的驱动<br>下载地址 <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.9.0" target="_blank" rel="external">https://github.com/mozilla/geckodriver/releases/tag/v0.9.0</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载geckodriver驱动"><br>至此，项目环境搭建完成。</p>
-<p>#三、测试示例<br>新建一个名为test.java 的文件。<br>实现效果：打开百度首页，输入“Selenium”，点击搜索。   </p>
-<pre><code>package test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;  
-
-public class baidu {
-    public static void main(String[] args){
-        //引入geckodriver驱动
-        System.setProperty(&quot;webdriver.firefox.marionette&quot;,&quot;C:\\Users\\Jaden\\Desktop\\Test\\jar\\geckodriver.exe&quot;);
-        //新建一个firefox浏览器实例
-        WebDriver driver = new FirefoxDriver();
-        //打开百度首页
-        driver.get(&quot;http://www.baidu.com&quot;);
-        //根据id获取输入框
-        WebElement textInput = driver.findElement(By.id(&quot;kw&quot;));
-        //在输入框输入“Selenium”
-        textInput.sendKeys(&quot;Selenium&quot;);
-        //根据id获取“百度一下”按钮
-        WebElement submit = driver.findElement(By.id(&quot;su&quot;));
-        //点击按钮
-        submit.click();
-   }   
-}
-</code></pre>
-          
+<li>Eclipse
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/24/Selenium-Java前端自动化测试教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

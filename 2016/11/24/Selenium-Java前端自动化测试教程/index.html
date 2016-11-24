@@ -82,55 +82,31 @@
 
 
 
-<meta name="description" content="#一、工具准备
-
+<meta name="description" content="一、工具准备
 Firefox浏览器（版本要求47以下，本教程版本为45.5，记得关掉它的自动更新。）
 JDK-1.8
-Eclipse
-
-#二、环境搭建
-####·配置Selenium RC
-
-下载 selenium-server-standalone-3.0.1下载地址 http://www.seleniumhq.org/download/
-
-启动selenium服务：将下载的zip包解压，然">
+Eclipse">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Selenium+Java前端自动化测试教程">
 <meta property="og:url" content="http://yoursite.com/2016/11/24/Selenium-Java前端自动化测试教程/index.html">
 <meta property="og:site_name" content="Jayden">
-<meta property="og:description" content="#一、工具准备
-
+<meta property="og:description" content="一、工具准备
 Firefox浏览器（版本要求47以下，本教程版本为45.5，记得关掉它的自动更新。）
 JDK-1.8
-Eclipse
-
-#二、环境搭建
-####·配置Selenium RC
-
-下载 selenium-server-standalone-3.0.1下载地址 http://www.seleniumhq.org/download/
-
-启动selenium服务：将下载的zip包解压，然">
+Eclipse">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-022b5f8db9a36c28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-0b98249199570819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-c1388f3be2a10c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-dfab0ff1674e3ba3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-4e98af5d849c610d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-11-24T07:01:26.000Z">
+<meta property="og:updated_time" content="2016-11-24T07:08:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Selenium+Java前端自动化测试教程">
-<meta name="twitter:description" content="#一、工具准备
-
+<meta name="twitter:description" content="一、工具准备
 Firefox浏览器（版本要求47以下，本教程版本为45.5，记得关掉它的自动更新。）
 JDK-1.8
-Eclipse
-
-#二、环境搭建
-####·配置Selenium RC
-
-下载 selenium-server-standalone-3.0.1下载地址 http://www.seleniumhq.org/download/
-
-启动selenium服务：将下载的zip包解压，然">
+Eclipse">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2529410-022b5f8db9a36c28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -428,22 +404,19 @@ Eclipse
       
 
       
-        <p>#一、工具准备</p>
-<ol>
+        <h1 id="一、工具准备"><a href="#一、工具准备" class="headerlink" title="一、工具准备"></a>一、工具准备</h1><ol>
 <li>Firefox浏览器（版本要求47以下，本教程版本为45.5，记得关掉它的自动更新。）</li>
 <li>JDK-1.8</li>
-<li>Eclipse</li>
+<li>Eclipse<a id="more"></a> 
+</li>
 </ol>
-<p>#二、环境搭建</p>
-<p>####·配置Selenium RC</p>
-<ol>
+<h1 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h1><h4 id="·配置Selenium-RC"><a href="#·配置Selenium-RC" class="headerlink" title="·配置Selenium RC"></a>·配置Selenium RC</h4><ol>
 <li><p>下载 selenium-server-standalone-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-022b5f8db9a36c28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-server-standalone-3.0.1"></p>
 </li>
 <li><p>启动selenium服务：<br>将下载的zip包解压，然后在命令行进入解压文件的目录，输入<br>java -jar seleniun-server-standalone-3.0.1.jar<br>如图所示表示启动服务成功：<br><img src="http://upload-images.jianshu.io/upload_images/2529410-0b98249199570819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动selenium服务"></p>
 </li>
 </ol>
-<p>####·配置Selenium Webdriver </p>
-<ol>
+<h4 id="·配置Selenium-Webdriver"><a href="#·配置Selenium-Webdriver" class="headerlink" title="·配置Selenium Webdriver"></a>·配置Selenium Webdriver</h4><ol>
 <li><p>下载 selenium-java-3.0.1<br>下载地址 <a href="http://www.seleniumhq.org/download/" target="_blank" rel="external">http://www.seleniumhq.org/download/</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-c1388f3be2a10c2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载selenium-java-3.0.1">  </p>
 </li>
 <li><p>在Eclipse中新建Java Project   </p>
@@ -451,8 +424,8 @@ Eclipse
 <li>如图操作，导入所需jar包  </li>
 </ol>
 <p><img src="http://upload-images.jianshu.io/upload_images/2529410-dfab0ff1674e3ba3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"><br><img src="http://upload-images.jianshu.io/upload_images/2529410-4e98af5d849c610d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导入jar包"></p>
-<p>###·下载selenium3使用firefox时所需的驱动<br>下载地址 <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.9.0" target="_blank" rel="external">https://github.com/mozilla/geckodriver/releases/tag/v0.9.0</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载geckodriver驱动"><br>至此，项目环境搭建完成。</p>
-<p>#三、测试示例<br>新建一个名为test.java 的文件。<br>实现效果：打开百度首页，输入“Selenium”，点击搜索。   </p>
+<h4 id="·下载selenium3使用firefox时所需的驱动"><a href="#·下载selenium3使用firefox时所需的驱动" class="headerlink" title="·下载selenium3使用firefox时所需的驱动"></a>·下载selenium3使用firefox时所需的驱动</h4><p>下载地址 <a href="https://github.com/mozilla/geckodriver/releases/tag/v0.9.0" target="_blank" rel="external">https://github.com/mozilla/geckodriver/releases/tag/v0.9.0</a><br><img src="http://upload-images.jianshu.io/upload_images/2529410-122f93872345110c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="下载geckodriver驱动"><br>至此，项目环境搭建完成。  </p>
+<h1 id="三、测试示例"><a href="#三、测试示例" class="headerlink" title="三、测试示例"></a>三、测试示例</h1><p>新建一个名为test.java 的文件。<br>实现效果：打开百度首页，输入“Selenium”，点击搜索。   </p>
 <pre><code>package test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -562,8 +535,17 @@ public class baidu {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/mypic.jpg"
@@ -636,6 +618,22 @@ public class baidu {
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、工具准备"><span class="nav-text">一、工具准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、环境搭建"><span class="nav-text">二、环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#·配置Selenium-RC"><span class="nav-text">·配置Selenium RC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#·配置Selenium-Webdriver"><span class="nav-text">·配置Selenium Webdriver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#·下载selenium3使用firefox时所需的驱动"><span class="nav-text">·下载selenium3使用firefox时所需的驱动</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、测试示例"><span class="nav-text">三、测试示例</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
