@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Markdown简明语法教程]]></title>
       <url>%2F2016%2F11%2F25%2FMarkdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B%2F</url>
-      <content type="text"><![CDATA[标题# h1 ## h2 ### h3 ... ###### h6 引用&gt;这是 &gt;一段 &gt;引用 或者只在第一行标注 &gt;这是 一段 引用 引用内可以嵌套引用或其他markdown语法 &gt; &gt; 引用内的引用 &gt; # 这是标题 有序列表1. First 2. Second 3. Third 无序列表* Red * Green * Blue 或者 + Red + Green + Blue 或者 - Red - Green - Blue 代码区块缩进4个空格或者一个制表符 行内代码加反引号 ` This is `code`. 分隔线三个以上的星号、减号、底线 *** --- ___ 链接[百度](http://www.baidu.com &quot;Title&quot;) 强调*em* _em_ **strong** __strong__ 图片![Alt text](/img/img.jpg &quot;Title&quot;) 自动链接&lt;www.baidu.com&gt; &lt;address@example.com&gt; 反斜杠在以下符号前加反斜杠即插入普通符号 \ 反斜线 ` 反引号 * 星号 _ 底线 {} 花括号 [] 方括号 () 括弧 # 井字号 + 加号 - 减号 . 英文句点 ! 惊叹号]]></content>
+      <content type="text"><![CDATA[标题# h1 ## h2 ### h3 ... ###### h6 引用&gt;这是 &gt;一段 &gt;引用 或者只在第一行标注 &gt;这是 一段 引用 引用内可以嵌套引用或其他markdown语法 &gt; &gt; 引用内的引用 &gt; # 这是标题 有序列表1. First 2. Second 3. Third 无序列表* Red * Green * Blue 或者 + Red + Green + Blue 或者 - Red - Green - Blue 代码区块缩进4个空格或者一个制表符 行内代码加反引号 ` This is `code`. 分隔线三个以上的星号、减号、底线 *** --- ___ 链接[百度](http://www.baidu.com &quot;Title&quot;) 强调*em* _em_ **strong** __strong__ 图片![Alt text](/img/img.jpg &quot;Title&quot;) 自动链接在html中会自动转换成a标签形式 &lt;www.baidu.com&gt; &lt;address@example.com&gt; 反斜杠在以下符号前加反斜杠即插入普通符号 \ 反斜线 ` 反引号 * 星号 _ 底线 {} 花括号 [] 方括号 () 括弧 # 井字号 + 加号 - 减号 . 英文句点 ! 惊叹号]]></content>
     </entry>
 
     
