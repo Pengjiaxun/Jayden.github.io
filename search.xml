@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[JS去除字符串空格的两种方法]]></title>
+      <url>%2F2016%2F12%2F19%2FJS%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%A9%BA%E6%A0%BC%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[在用户填写登录表单的时候，由于用户输入的不确定性，可能会出现在输入用户名的时候，其前后有空格的情况。这就需要我们对其进行修正。 解决方法：方法1: js加正则表达式来构造trim函数 function trim(str){ return str.replace(/^\s*|\s*$/g,&apos;&apos;);//全局匹配,字符串开始或结尾的所有空字符 } var str = &quot; 前后各有两个空格 &quot;; var tem = trim(str); console.log(str.length);//12 console.log(tem.length);//8 注意：如果浏览器本身就实现了js的trim函数，则可以直接使用xxx.trim()操作，如果浏览器没实现(如ie)，只能用以上正则替换。 方法2:jquery的$.trim //先引入jquery库，再使用 var str = $.trim(&quot; 前后各有两个空格 &quot;); console.log(str);//&quot;前后各有两个空格&quot; jquery的trim函数具有良好的浏览器兼容性，推荐使用。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Markdown简明语法教程]]></title>
       <url>%2F2016%2F11%2F25%2FMarkdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%95%99%E7%A8%8B%2F</url>
       <content type="text"><![CDATA[标题# h1 ## h2 ### h3 ... ###### h6 引用&gt;这是 &gt;一段 &gt;引用 或者只在第一行标注 &gt;这是 一段 引用 引用内可以嵌套引用或其他markdown语法 &gt; &gt; 引用内的引用 &gt; # 这是标题 有序列表1. First 2. Second 3. Third 无序列表* Red * Green * Blue 或者 + Red + Green + Blue 或者 - Red - Green - Blue 代码区块缩进4个空格或者一个制表符 行内代码加反引号 ` This is `code`. 分隔线三个以上的星号、减号、底线 *** --- ___ 链接[百度](http://www.baidu.com &quot;Title&quot;) 强调*em* _em_ **strong** __strong__ 图片![Alt text](/img/img.jpg &quot;Title&quot;) 自动链接在html中会自动转换成a标签形式 &lt;www.baidu.com&gt; &lt;address@example.com&gt; 反斜杠在以下符号前加反斜杠即插入普通符号 \ 反斜线 ` 反引号 * 星号 _ 底线 {} 花括号 [] 方括号 () 括弧 # 井字号 + 加号 - 减号 . 英文句点 ! 惊叹号]]></content>
