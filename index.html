@@ -368,85 +368,17 @@
 
       
         
-          
-            <h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><pre><code>new Array();
+          <h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><pre><code>new Array();
 new Array(size);
 new Array(a,b,c...);
-</code></pre><h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><p>连接两个或更多的数组，并返回结果。</p>
-<pre><code>var a = [1,2,3];
-console.log(a.concat(4,5,6));//[1, 2, 3, 4, 5, 6]
-console.log(a);//[1, 2, 3]
-</code></pre><h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p>把数组的所有元素放入一个字符，并通过指定的分隔符分隔。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.join(&quot;-&quot;));//peng-jia-xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h1><p>删除并返回数组的最后一个元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.pop());//xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;]
-</code></pre><h1 id="push"><a href="#push" class="headerlink" title="push"></a>push</h1><p>向数组的末尾添加一个或更多元素，并返回新的长度。</p>
-<pre><code>var a = new Array(2);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-console.log(a.push(&quot;xun&quot;));//3
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;,&quot;xun&quot;]
-</code></pre><h1 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h1><p>颠倒数组中元素的顺序。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.reverse());//[&quot;xun&quot;, &quot;jia&quot;, &quot;peng&quot;]
-console.log(a);//[&quot;xun&quot;, &quot;jia&quot;, &quot;peng&quot;]
-</code></pre><h1 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h1><p>删除并返回数组的第一个元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.shift());//peng
-console.log(a);//[&quot;jia&quot;,&quot;xun&quot;]     
-</code></pre><h1 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a>unshift</h1><p>向数组的开头添加一个或更多元素，并返回新的长度。</p>
-<pre><code>var a = new Array(2);
-a[0] = &quot;jia&quot;;
-a[1] = &quot;xun&quot;;
-console.log(a.unshift(&quot;peng&quot;));//3
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><p>从某个已有的数组返回选定的元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.slice(1));//[&quot;jia&quot;, &quot;xun&quot;]
-console.log(a.slice(0,2));//[&quot;peng&quot;, &quot;jia&quot;]
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h1><p>对数组的元素进行排序。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.sort());//[&quot;jia&quot;, &quot;peng&quot;, &quot;xun&quot;]
-console.log(a);//[&quot;jia&quot;, &quot;peng&quot;, &quot;xun&quot;]
-</code></pre><h1 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h1><p>删除元素，并向数组添加新元素，然后返回被删除的项目。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.splice(1,1,&quot;xiao&quot;));//[&quot;jia&quot;]
-console.log(a);//[&quot;peng&quot;, &quot;xiao&quot;, &quot;xun&quot;]
-</code></pre><h1 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h1><p>把数组转换为字符串，并返回结果。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.toString());//peng,jia,xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
 </code></pre>
-          
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/02/09/JS数组常用操作/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
