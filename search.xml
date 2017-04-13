@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[cookie、sessionStorage和localStorage的区别]]></title>
+      <url>%2F2017%2F04%2F13%2Fcookie%E3%80%81sessionStorage%E5%92%8ClocalStorage%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+      <content type="text"><![CDATA[cookie介绍：早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。 用处：用于保存状态以及能够为浏览器提供身份识别机制。注意，js中不会对cookie采用任何加密机制（只有通过https协议来传输cookie则是安全的）。 有效期：默认浏览器关闭后删除cookie，可通过设置max-age（单位是秒）来设置cookie的有限期。 作用域：默认对创建cookie的页面以及和该页面同目录或者子目录下的其他网页可见。修改作用域参考cookie的path和domain属性。 局限性：每个cookie保存的数据（名字和值的总量）不能超过4KB，浏览器保存的cookie不能超过300个，服务器保存的cookie不能超过20个。 sessionStorage和localStorage介绍：两者都代表同一个Storage对象，它们的区别仅仅在于存储的有限期和作用域的不同，即数据可以存储多少时间以及谁拥有数据的访问权。 区别：localStorage存储的数据是永久性的，永不过期；localStorage存储的数据仅限于当前标签页或最顶层的窗口，一旦标签页或窗口被关闭，数据随即被删除。 作用域：localStorage和localStorage的作用域都是限定在文档源级别的。（文档源 = 协议 + 主机名 + 端口）只有同源文档才可以共享数据。另外，同源前提下的不同标签页中的sesstionStorage无法共享。 存储API： localStorage.setItem(&apos;x&apos;, 1); // 存储某项的值 localStorage.getItem(&apos;x&apos;); // 获取某项的值 localStorage.removeItem(&apos;x&apos;); // 删除具体项 localStorage.clear(); // 全部清楚]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[理解JS中的call和apply]]></title>
       <url>%2F2017%2F03%2F14%2F%E7%90%86%E8%A7%A3JS%E4%B8%AD%E7%9A%84call%E5%92%8Capply%2F</url>
       <content type="text"><![CDATA[存在即合理，首先了解下call和apply存在的作用。 JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可以动态改变的。 call 和apply 都是为了改变函数运行时的context（即上下文）而存在的。换句话说，就是为了改变函数体内部this的指向。 定义一个宠物对象，其拥有words属性和say函数： var pet = { words:&apos;...&apos;, say:function(){ console.log(&apos;Say:&apos; + this.words) } } pet.say() //&quot;Say: ...&quot; 每个宠物有不同的叫声，如果我们定义一个对象： var cat = { words:&apos;miao&apos; } 在不重写say方法的条件下，我们希望通过pet对象使它能拥有自己的叫声miao，只需要利用call或者apply改变pet里面的this的指向，将this指向cat即可： pet.say.call(cat) //&quot;Say:miao&quot; pet.say.apply(cat) //&quot;Say:miao&quot; 二者作用一样，唯一的区别是接收参数的形式不一样： obj.call(thisObj, arg1, arg2, ...) //接受的是连续参数。 obj.apply(thisObj, [arg1, arg2, ...]) //接受的是数组参数 通过call和apply，可以实现对象的继承： var parent = function{ this.name = &apos;pjx&apos; this.sex = &apos;boy&apos; } var child = {}; console.log(child);//{} parent.call(child); console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}]]></content>

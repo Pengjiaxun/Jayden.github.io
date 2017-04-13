@@ -82,19 +82,16 @@
 
 
 
-<meta name="description" content="存在即合理，首先了解下call和apply存在的作用。
-JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可以动态改变的。">
+<meta name="description" content="cookie介绍：早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解JS中的call和apply">
-<meta property="og:url" content="http://yoursite.com/2017/03/14/理解JS中的call和apply/index.html">
+<meta property="og:title" content="cookie、sessionStorage和localStorage的区别">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/cookie、sessionStorage和localStorage的区别/index.html">
 <meta property="og:site_name" content="Jayden">
-<meta property="og:description" content="存在即合理，首先了解下call和apply存在的作用。
-JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可以动态改变的。">
-<meta property="og:updated_time" content="2017-03-14T12:21:06.000Z">
+<meta property="og:description" content="cookie介绍：早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。">
+<meta property="og:updated_time" content="2017-04-13T09:46:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解JS中的call和apply">
-<meta name="twitter:description" content="存在即合理，首先了解下call和apply存在的作用。
-JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可以动态改变的。">
+<meta name="twitter:title" content="cookie、sessionStorage和localStorage的区别">
+<meta name="twitter:description" content="cookie介绍：早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。">
 
 
 
@@ -122,13 +119,13 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/14/理解JS中的call和apply/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/13/cookie、sessionStorage和localStorage的区别/"/>
 
 
 
 
 
-  <title> 理解JS中的call和apply | Jayden </title>
+  <title> cookie、sessionStorage和localStorage的区别 | Jayden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -252,7 +249,7 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/14/理解JS中的call和apply/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/cookie、sessionStorage和localStorage的区别/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Jayden">
@@ -276,7 +273,7 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
             
             
               
-                理解JS中的call和apply
+                cookie、sessionStorage和localStorage的区别
               
             
           </h1>
@@ -289,8 +286,8 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-14T20:20:43+08:00">
-                2017-03-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-13T17:38:17+08:00">
+                2017-04-13
               </time>
             
 
@@ -323,8 +320,8 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/03/14/理解JS中的call和apply/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/14/理解JS中的call和apply/" itemprop="commentCount"></span>
+                <a href="/2017/04/13/cookie、sessionStorage和localStorage的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/13/cookie、sessionStorage和localStorage的区别/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -334,7 +331,7 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
 
           
           
-             <span id="/2017/03/14/理解JS中的call和apply/" class="leancloud_visitors" data-flag-title="理解JS中的call和apply">
+             <span id="/2017/04/13/cookie、sessionStorage和localStorage的区别/" class="leancloud_visitors" data-flag-title="cookie、sessionStorage和localStorage的区别">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -359,37 +356,20 @@ JS中函数存在 定义时上下文 和 运行时上下文，并且上文是可
       
 
       
-        <p>存在即合理，首先了解下<code>call</code>和<code>apply</code>存在的作用。</p>
-<p>JS中函数存在 <strong>定义时上下文</strong> 和 <strong>运行时上下文</strong>，并且上文是可以动态改变的。<a id="more"></a></p>
-<p><code>call</code> 和<code>apply</code> 都是为了改变<strong>函数</strong>运行时的<code>context</code>（即上下文）而存在的。换句话说，就是为了改变函数体内部<code>this</code>的指向。</p>
-<p>定义一个宠物对象，其拥有<code>words</code>属性和<code>say</code>函数：</p>
-<pre><code>var pet = {
-  words:&apos;...&apos;,
-  say:function(){
-      console.log(&apos;Say:&apos; + this.words)
-  }
-}
-pet.say() //&quot;Say: ...&quot;
-</code></pre><p>每个宠物有不同的叫声，如果我们定义一个对象：</p>
-<pre><code>var cat = {
-    words:&apos;miao&apos;
-}
-</code></pre><p>在不重写<code>say</code>方法的条件下，我们希望通过<code>pet</code>对象使它能拥有自己的叫声<code>miao</code>，只需要利用<code>call</code>或者<code>apply</code>改变<code>pet</code>里面的<code>this</code>的指向，将<code>this</code>指向<code>cat</code>即可：</p>
-<pre><code>pet.say.call(cat) //&quot;Say:miao&quot;
-pet.say.apply(cat) //&quot;Say:miao&quot;
-</code></pre><p>二者作用一样，唯一的区别是接收参数的形式不一样：</p>
-<pre><code>obj.call(thisObj, arg1, arg2, ...) //接受的是连续参数。
-obj.apply(thisObj, [arg1, arg2, ...]) //接受的是数组参数
-</code></pre><p>通过<code>call</code>和<code>apply</code>，可以实现对象的继承：</p>
-<pre><code>var parent = function{
-    this.name = &apos;pjx&apos;
-    this.sex = &apos;boy&apos; 
-}
-var child = {};
-console.log(child);//{} 
-
-parent.call(child);
-console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
+        <h1 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h1><p><strong>介绍：</strong>早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。<a id="more"></a></p>
+<p><strong>用处：</strong>用于保存状态以及能够为浏览器提供身份识别机制。注意，js中不会对cookie采用任何加密机制（只有通过https协议来传输cookie则是安全的）。</p>
+<p><strong>有效期：</strong>默认浏览器关闭后删除cookie，可通过设置<code>max-age</code>（单位是秒）来设置cookie的有限期。</p>
+<p><strong>作用域：</strong>默认对创建cookie的页面以及和该页面同目录或者子目录下的其他网页可见。修改作用域参考cookie的<code>path</code>和<code>domain</code>属性。</p>
+<p><strong>局限性：</strong>每个cookie保存的数据（名字和值的总量）不能超过4KB，浏览器保存的cookie不能超过300个，服务器保存的cookie不能超过20个。</p>
+<hr>
+<h1 id="sessionStorage和localStorage"><a href="#sessionStorage和localStorage" class="headerlink" title="sessionStorage和localStorage"></a>sessionStorage和localStorage</h1><p><strong>介绍：</strong>两者都代表同一个Storage对象，它们的区别仅仅在于存储的有限期和作用域的不同，即数据可以存储多少时间以及谁拥有数据的访问权。</p>
+<p><strong>区别</strong>：localStorage存储的数据是永久性的，永不过期；localStorage存储的数据仅限于当前标签页或最顶层的窗口，一旦标签页或窗口被关闭，数据随即被删除。</p>
+<p><strong>作用域：</strong>localStorage和localStorage的作用域都是限定在文档源级别的。（文档源 = 协议 + 主机名 + 端口）只有同源文档才可以共享数据。另外，同源前提下的不同标签页中的sesstionStorage无法共享。</p>
+<p><strong>存储API：</strong></p>
+<pre><code>localStorage.setItem(&apos;x&apos;, 1); // 存储某项的值
+localStorage.getItem(&apos;x&apos;); // 获取某项的值
+localStorage.removeItem(&apos;x&apos;); // 删除具体项
+localStorage.clear(); // 全部清楚
 </code></pre>
       
     </div>
@@ -416,8 +396,8 @@ console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/10/使用vue的proxyTable解决跨域问题/" rel="next" title="使用vue.js的proxyTable解决跨域问题">
-                <i class="fa fa-chevron-left"></i> 使用vue.js的proxyTable解决跨域问题
+              <a href="/2017/03/14/理解JS中的call和apply/" rel="next" title="理解JS中的call和apply">
+                <i class="fa fa-chevron-left"></i> 理解JS中的call和apply
               </a>
             
           </div>
@@ -425,10 +405,6 @@ console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/13/cookie、sessionStorage和localStorage的区别/" rel="prev" title="cookie、sessionStorage和localStorage的区别">
-                cookie、sessionStorage和localStorage的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,8 +430,8 @@ console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/14/理解JS中的call和apply/"
-           data-title="理解JS中的call和apply" data-url="http://yoursite.com/2017/03/14/理解JS中的call和apply/">
+      <div class="ds-thread" data-thread-key="2017/04/13/cookie、sessionStorage和localStorage的区别/"
+           data-title="cookie、sessionStorage和localStorage的区别" data-url="http://yoursite.com/2017/04/13/cookie、sessionStorage和localStorage的区别/">
       </div>
     
   </div>
@@ -479,8 +455,17 @@ console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/mypic.jpg"
@@ -580,6 +565,22 @@ console.log(child); //{name: &quot;pjx&quot;, sex: &apos;boy&apos;}
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#cookie"><span class="nav-text">cookie</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sessionStorage和localStorage"><span class="nav-text">sessionStorage和localStorage</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
