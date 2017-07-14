@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Jayden" />
+  <meta name="keywords" content="前端," />
 
 
 
@@ -82,22 +82,16 @@
 
 
 
-<meta name="description" content="创建数组new Array();
-new Array(size);
-new Array(a,b,c...);">
+<meta name="description" content="理解闭包前先要理解两个概念：作用域和作用域链。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS数组常用操作">
-<meta property="og:url" content="http://yoursite.com/2017/02/09/JS数组常用操作/index.html">
+<meta property="og:title" content="5分钟入门闭包">
+<meta property="og:url" content="http://yoursite.com/2017/07/14/5分钟入门闭包/index.html">
 <meta property="og:site_name" content="Jayden">
-<meta property="og:description" content="创建数组new Array();
-new Array(size);
-new Array(a,b,c...);">
-<meta property="og:updated_time" content="2017-02-09T08:57:25.000Z">
+<meta property="og:description" content="理解闭包前先要理解两个概念：作用域和作用域链。">
+<meta property="og:updated_time" content="2017-07-14T09:20:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS数组常用操作">
-<meta name="twitter:description" content="创建数组new Array();
-new Array(size);
-new Array(a,b,c...);">
+<meta name="twitter:title" content="5分钟入门闭包">
+<meta name="twitter:description" content="理解闭包前先要理解两个概念：作用域和作用域链。">
 
 
 
@@ -125,13 +119,13 @@ new Array(a,b,c...);">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/09/JS数组常用操作/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/14/5分钟入门闭包/"/>
 
 
 
 
 
-  <title> JS数组常用操作 | Jayden </title>
+  <title> 5分钟入门闭包 | Jayden </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -255,7 +249,7 @@ new Array(a,b,c...);">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/09/JS数组常用操作/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/14/5分钟入门闭包/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Jayden">
@@ -279,7 +273,7 @@ new Array(a,b,c...);">
             
             
               
-                JS数组常用操作
+                5分钟入门闭包
               
             
           </h1>
@@ -292,8 +286,8 @@ new Array(a,b,c...);">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T16:54:36+08:00">
-                2017-02-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-14T17:15:21+08:00">
+                2017-07-14
               </time>
             
 
@@ -326,8 +320,8 @@ new Array(a,b,c...);">
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2017/02/09/JS数组常用操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/09/JS数组常用操作/" itemprop="commentCount"></span>
+                <a href="/2017/07/14/5分钟入门闭包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/14/5分钟入门闭包/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -337,7 +331,7 @@ new Array(a,b,c...);">
 
           
           
-             <span id="/2017/02/09/JS数组常用操作/" class="leancloud_visitors" data-flag-title="JS数组常用操作">
+             <span id="/2017/07/14/5分钟入门闭包/" class="leancloud_visitors" data-flag-title="5分钟入门闭包">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -362,84 +356,70 @@ new Array(a,b,c...);">
       
 
       
-        <h1 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h1><pre><code>new Array();
-new Array(size);
-new Array(a,b,c...);
-</code></pre><a id="more"></a>
-<h1 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h1><p>连接两个或更多的数组，并返回结果。</p>
-<pre><code>var a = [1,2,3];
-console.log(a.concat(4,5,6));//[1, 2, 3, 4, 5, 6]
-console.log(a);//[1, 2, 3]
-</code></pre><h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p>把数组的所有元素放入一个字符，并通过指定的分隔符分隔。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.join(&quot;-&quot;));//peng-jia-xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h1><p>删除并返回数组的最后一个元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.pop());//xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;]
-</code></pre><h1 id="push"><a href="#push" class="headerlink" title="push"></a>push</h1><p>向数组的末尾添加一个或更多元素，并返回新的长度。</p>
-<pre><code>var a = new Array(2);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-console.log(a.push(&quot;xun&quot;));//3
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;,&quot;xun&quot;]
-</code></pre><h1 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h1><p>颠倒数组中元素的顺序。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.reverse());//[&quot;xun&quot;, &quot;jia&quot;, &quot;peng&quot;]
-console.log(a);//[&quot;xun&quot;, &quot;jia&quot;, &quot;peng&quot;]
-</code></pre><h1 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h1><p>删除并返回数组的第一个元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.shift());//peng
-console.log(a);//[&quot;jia&quot;,&quot;xun&quot;]     
-</code></pre><h1 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a>unshift</h1><p>向数组的开头添加一个或更多元素，并返回新的长度。</p>
-<pre><code>var a = new Array(2);
-a[0] = &quot;jia&quot;;
-a[1] = &quot;xun&quot;;
-console.log(a.unshift(&quot;peng&quot;));//3
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h1><p>从某个已有的数组返回选定的元素。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.slice(1));//[&quot;jia&quot;, &quot;xun&quot;]
-console.log(a.slice(0,2));//[&quot;peng&quot;, &quot;jia&quot;]
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre><h1 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h1><p>对数组的元素进行排序。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.sort());//[&quot;jia&quot;, &quot;peng&quot;, &quot;xun&quot;]
-console.log(a);//[&quot;jia&quot;, &quot;peng&quot;, &quot;xun&quot;]
-</code></pre><h1 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h1><p>删除元素，并向数组添加新元素，然后返回被删除的项目。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.splice(1,1,&quot;xiao&quot;));//[&quot;jia&quot;]
-console.log(a);//[&quot;peng&quot;, &quot;xiao&quot;, &quot;xun&quot;]
-</code></pre><h1 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h1><p>把数组转换为字符串，并返回结果。</p>
-<pre><code>var a = new Array(3);
-a[0] = &quot;peng&quot;;
-a[1] = &quot;jia&quot;;
-a[2] = &quot;xun&quot;;
-console.log(a.toString());//peng,jia,xun
-console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
-</code></pre>
+        <p>理解闭包前先要理解两个概念：作用域和作用域链。<a id="more"></a><br>一、作用域分为:</p>
+<ol>
+<li>全局作用域</li>
+<li><p>函数作用域</p>
+<pre><code>var a = 100
+function fn() {
+  var a = 200
+  console.log(&apos;local: &apos; + a)
+}
+fn() // local: 200
+console.log(&apos;global: &apos; + a) // glocal: 100
+</code></pre></li>
+</ol>
+<p>执行上面的代码可以看到，第一个a是定义在全局作用域里的，第二个a是定义在函数作用域里的。在全局作用域的变量a和在函数作用域变量a互不影响。<br>注意：没有块级作用域。</p>
+<p>二、作用域链</p>
+<pre><code>var a = 100
+function f1() {
+  var b = 200
+  function f2() {
+    var c = 300
+    console.log(a)
+    console.log(b)
+    console.log(c)
+  }
+  f2()
+}
+f1() // 100 200 300
+</code></pre><p>执行以上代码，依次打印出a, b, c的值100，200，300。其中a是定义在全局作用域里，b是定义在函数f1作用域里，c是定义在函数f2作用域里。</p>
+<p>当代码执行到函数f2里的<code>console.log(a)</code>的时候，首先会在函数f2的作用域找，没有 –&gt; 到父级作用域即函数f1的作用域里面找，也没有 –&gt; 再到父级作用域即全局作用域里面找，有，打印。</p>
+<p>同理当<code>console.log(b)</code>的时候首先会在函数f2的作用域找，没有 –&gt; 到父级作用域即函数f1的作用域里面找，有，打印。</p>
+<p>这三个作用域组成的有序集合(f2 – f1 – window)就是作用域链。</p>
+<p>注意：函数的父级作用域指的是函数定义时候的决定的，而不是执行的时候。即函数在什么地方定义，父级作用域就在哪里。</p>
+<p>三、闭包<br>闭包有两种应用场景：</p>
+<ol>
+<li><p>函数作为返回值</p>
+<pre><code>function fn() {
+  var a = 100
+  return function() {
+    console.log(a)
+  }
+}
+var f1 = fn()
+var a = 200
+f1() // 100
+</code></pre><p>fn返回一个函数，赋值给f1,执行f1()即执行fn的返回函数。返回函数在定义时的父级作用域是fn，因此返回函数里的变量a会到函数fn的作用域去找，而与函数f1执行时定义的全局作用域里的变量a无关。</p>
+</li>
+<li><p>函数作为参数传递</p>
+<pre><code>function f1() {
+  var a = 100
+  return function() {
+    console.log(a)
+  }
+}
+var fn = f1()
+function f2(f) {
+  var a = 200
+  f()
+}
+f2(fn)  // 100
+</code></pre><p>函数f2接收一个函数作为变量传入，执行函数f即执行函数f1,剩下的代码执行过程和场景1同理。</p>
+</li>
+</ol>
+<p>总结：闭包的特性让我们可以在函数作用域之外，通过作用域链访问到函数作用域内的变量，但是无法对其进行修改。</p>
+
       
     </div>
 
@@ -460,13 +440,19 @@ console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/19/JS去除字符串空格的两种方法/" rel="next" title="JS去除字符串空格的两种方法">
-                <i class="fa fa-chevron-left"></i> JS去除字符串空格的两种方法
+              <a href="/2017/04/13/cookie、sessionStorage和localStorage的区别/" rel="next" title="cookie、sessionStorage和localStorage的区别">
+                <i class="fa fa-chevron-left"></i> cookie、sessionStorage和localStorage的区别
               </a>
             
           </div>
@@ -474,10 +460,6 @@ console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/10/使用vue的proxyTable解决跨域问题/" rel="prev" title="使用vue.js的proxyTable解决跨域问题">
-                使用vue.js的proxyTable解决跨域问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -503,8 +485,8 @@ console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/09/JS数组常用操作/"
-           data-title="JS数组常用操作" data-url="http://yoursite.com/2017/02/09/JS数组常用操作/">
+      <div class="ds-thread" data-thread-key="2017/07/14/5分钟入门闭包/"
+           data-title="5分钟入门闭包" data-url="http://yoursite.com/2017/07/14/5分钟入门闭包/">
       </div>
     
   </div>
@@ -528,17 +510,8 @@ console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/mypic.jpg"
@@ -638,22 +611,6 @@ console.log(a);//[&quot;peng&quot;, &quot;jia&quot;, &quot;xun&quot;]
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建数组"><span class="nav-text">创建数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#concat"><span class="nav-text">concat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#join"><span class="nav-text">join</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pop"><span class="nav-text">pop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#push"><span class="nav-text">push</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reverse"><span class="nav-text">reverse</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shift"><span class="nav-text">shift</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unshift"><span class="nav-text">unshift</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slice"><span class="nav-text">slice</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sort"><span class="nav-text">sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#splice"><span class="nav-text">splice</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toString-NaN"><span class="nav-text">toString</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>

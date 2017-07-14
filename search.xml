@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[5分钟入门闭包]]></title>
+      <url>%2F2017%2F07%2F14%2F5%E5%88%86%E9%92%9F%E5%85%A5%E9%97%A8%E9%97%AD%E5%8C%85%2F</url>
+      <content type="text"><![CDATA[理解闭包前先要理解两个概念：作用域和作用域链。一、作用域分为: 全局作用域 函数作用域 var a = 100 function fn() { var a = 200 console.log(&apos;local: &apos; + a) } fn() // local: 200 console.log(&apos;global: &apos; + a) // glocal: 100 执行上面的代码可以看到，第一个a是定义在全局作用域里的，第二个a是定义在函数作用域里的。在全局作用域的变量a和在函数作用域变量a互不影响。注意：没有块级作用域。 二、作用域链 var a = 100 function f1() { var b = 200 function f2() { var c = 300 console.log(a) console.log(b) console.log(c) } f2() } f1() // 100 200 300 执行以上代码，依次打印出a, b, c的值100，200，300。其中a是定义在全局作用域里，b是定义在函数f1作用域里，c是定义在函数f2作用域里。 当代码执行到函数f2里的console.log(a)的时候，首先会在函数f2的作用域找，没有 –&gt; 到父级作用域即函数f1的作用域里面找，也没有 –&gt; 再到父级作用域即全局作用域里面找，有，打印。 同理当console.log(b)的时候首先会在函数f2的作用域找，没有 –&gt; 到父级作用域即函数f1的作用域里面找，有，打印。 这三个作用域组成的有序集合(f2 – f1 – window)就是作用域链。 注意：函数的父级作用域指的是函数定义时候的决定的，而不是执行的时候。即函数在什么地方定义，父级作用域就在哪里。 三、闭包闭包有两种应用场景： 函数作为返回值 function fn() { var a = 100 return function() { console.log(a) } } var f1 = fn() var a = 200 f1() // 100 fn返回一个函数，赋值给f1,执行f1()即执行fn的返回函数。返回函数在定义时的父级作用域是fn，因此返回函数里的变量a会到函数fn的作用域去找，而与函数f1执行时定义的全局作用域里的变量a无关。 函数作为参数传递 function f1() { var a = 100 return function() { console.log(a) } } var fn = f1() function f2(f) { var a = 200 f() } f2(fn) // 100 函数f2接收一个函数作为变量传入，执行函数f即执行函数f1,剩下的代码执行过程和场景1同理。 总结：闭包的特性让我们可以在函数作用域之外，通过作用域链访问到函数作用域内的变量，但是无法对其进行修改。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[cookie、sessionStorage和localStorage的区别]]></title>
       <url>%2F2017%2F04%2F13%2Fcookie%E3%80%81sessionStorage%E5%92%8ClocalStorage%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
       <content type="text"><![CDATA[cookie介绍：早期设计用于服务端存储少量数据的，任何以cookie形式存储的数据，不论服务器端是否需要，每一次HTTP请求都会把这些数据传输到服务器。 用处：用于保存状态以及能够为浏览器提供身份识别机制。注意，js中不会对cookie采用任何加密机制（只有通过https协议来传输cookie则是安全的）。 有效期：默认浏览器关闭后删除cookie，可通过设置max-age（单位是秒）来设置cookie的有限期。 作用域：默认对创建cookie的页面以及和该页面同目录或者子目录下的其他网页可见。修改作用域参考cookie的path和domain属性。 局限性：每个cookie保存的数据（名字和值的总量）不能超过4KB，浏览器保存的cookie不能超过300个，服务器保存的cookie不能超过20个。 sessionStorage和localStorage介绍：两者都代表同一个Storage对象，它们的区别仅仅在于存储的有限期和作用域的不同，即数据可以存储多少时间以及谁拥有数据的访问权。 区别：localStorage存储的数据是永久性的，永不过期；localStorage存储的数据仅限于当前标签页或最顶层的窗口，一旦标签页或窗口被关闭，数据随即被删除。 作用域：localStorage和localStorage的作用域都是限定在文档源级别的。（文档源 = 协议 + 主机名 + 端口）只有同源文档才可以共享数据。另外，同源前提下的不同标签页中的sesstionStorage无法共享。 存储API： localStorage.setItem(&apos;x&apos;, 1); // 存储某项的值 localStorage.getItem(&apos;x&apos;); // 获取某项的值 localStorage.removeItem(&apos;x&apos;); // 删除具体项 localStorage.clear(); // 全部清楚]]></content>
